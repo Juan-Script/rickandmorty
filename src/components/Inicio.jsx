@@ -9,6 +9,7 @@ const Inicio = () => {
   useEffect(()=>{
     todosPersonajes().then((response) => {
       setPersonajes(response)
+      console.log(response)
     })
   },[])
   
@@ -16,16 +17,6 @@ const Inicio = () => {
 
   return (
     <>
-      {/* {Array.isArray(personajes) ? (
-        personajes.map(personaje => (
-          <div key={personaje.id}>
-            <a href={personaje.image}>{personaje.name}</a>
-
-          </div>
-        ))
-      ) : (
-        <p>No hay personajes</p>
-      )} */}
 
       {Array.isArray(personajes) ? (
         personajes.map(personaje => (
